@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container } from "./assets/css/App";
+import Card from "./components/Card";
 
+// Card Icon
+import icon from "./assets/images/CorporateBylaws.svg";
+
+// Landing Page
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Card
+        title="Corporate Bylaws"
+        text="An internal document that details the operating rules for the corporation and are typically adopted at the organizational meeting of the board of directors."
+        imageIcon={`${icon}`}
+        uri="https://github.com/LucianoPierdona"
+      />
+    </Container>
   );
 }
 
