@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// Card Container Styling
 export const CardBody = styled.div`
   position: relative;
   width: 305px;
@@ -15,6 +16,8 @@ export const CardBody = styled.div`
     0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
     0 8px 8px rgba(0, 0, 0, 0.1);
   transition: opacity 0.2s;
+
+  /* hover */
   &:hover {
     transition: 0.2s;
     & button {

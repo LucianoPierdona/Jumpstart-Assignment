@@ -7,7 +7,6 @@ import {
   ExtraButtons,
   ImageContainer,
 } from "../assets/css/components/Card";
-
 import dots from "../assets/images/Dots.svg";
 
 // List Icons
@@ -23,15 +22,21 @@ interface CardProps {
   uri: string;
 }
 
+// Card Component
 const Card: React.FC<CardProps> = ({ text, title, imageIcon, uri }) => {
+  // show Buttons State
   const [showButtons, setShowButtons] = useState(false);
 
+  // show the extra buttons
   const onButtonClick = () => {
     setShowButtons(!showButtons);
   };
 
   return (
     <CardBody>
+      <Button type="button" onClick={onButtonClick}>
+        <img src={dots} alt="dots" />
+      </Button>
       {showButtons && (
         <ExtraButtons>
           <li>
@@ -48,9 +53,6 @@ const Card: React.FC<CardProps> = ({ text, title, imageIcon, uri }) => {
           </li>
         </ExtraButtons>
       )}
-      <Button type="button" onClick={onButtonClick}>
-        <img src={dots} alt="dots" />
-      </Button>
       <CardHeader>
         <ImageContainer>
           <img src={imageIcon} alt="Corporative Bylaws" />
